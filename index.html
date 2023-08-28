@@ -1,32 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone Hunter API</title>
     <!-- daisy UI and tailwind link -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- font awsome linkup -->
-    <script src="https://kit.fontawesome.com/6d208b1cbc.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/6d208b1cbc.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- poppins fonts link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom tailwind class managing -->
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
     <!-- header -->
-    <header>
-
+    <header class="">
+      <div class="bg-sky-100 h-[650px]">
+        <div
+          class="max-w-screen-xl mx-auto flex items-center justify-between py-7"
+        >
+          <h1 class="text-xl font-bold">Hot Gadgets</h1>
+          <button class="px-5 bg-sky-500 text-white py-3 rounded-md">
+            Sign Up
+          </button>
+        </div>
+        <div class="max-w-screen-xl mx-auto text-center">
+          <h2 class="text-5xl font-bold mt-6">Apple Iphone 13 Pro Max</h2>
+          <p class="mt-6 text-gray-500 leading-loose">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority <br />
+            have suffered alteration in some form, by injected humou.
+          </p>
+          <button class="px-5 bg-sky-500 text-white py-3 rounded-md mt-10">
+            Buy Now
+          </button>
+        </div>
+      </div>
+      <div class="flex gap-12 -mt-64 justify-center">
+        <img
+          class="w-[180px] h-[348px] mt-36"
+          src="photos/iphone-13-pro-max.png"
+          alt=""
+        />
+        <img
+          class="w-[243px] h-[475px] mt-4"
+          src="photos/iphone-13-pro-max.png"
+          alt=""
+        />
+        <img
+          class="w-[180px] h-[348px] mt-36"
+          src="photos/iphone-13-pro-max.png"
+          alt=""
+        />
+      </div>
     </header>
     <!-- main -->
-    <main>
-
+    <main class="max-w-screen-xl mx-auto">
+      <section class="">
+        <!-- start search bar -->
+        <div class="mt-28">
+          <h3 class="text-center font-bold text-3xl text-gray-800">
+            Search your phone
+          </h3>
+          <div class="mt-10 w-6/12 mx-auto">
+            <div class="flex items-center bg-gray-200 flex-1 rounded-lg">
+              <i class="fa-solid fa-magnifying-glass px-4 text-gray-500"></i>
+              <input id="SearchIput"
+                class="border text-gray-600 bg-transparent outline-none border-none px-2 py-3.5 text-base font-medium flex-1"
+                type="text"
+                placeholder="Search your phone"
+              />
+              <button onclick="searchValue()"
+                class="bg-sky-500 py-3.5 text-white font-semibold text-base px-8 rounded-lg border-none outline-none"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- end search bar -->
+        <!-- produncts container start -->
+        <div>
+          <div id="phonesContainer" class="grid grid-cols-3 mt-20 gap-10">
+          </div>
+          <div id="showAllBtn" class="text-center mt-20 mb-5 hidden">
+            <button onclick="showAllMobile()"
+                class="bg-sky-500 py-3.5 text-white font-semibold text-base px-8 rounded-lg border-none outline-none"
+              >
+                Show All
+              </button>
+          </div>
+      </div>
+      </section>
     </main>
     <!-- footer -->
     <footer>
 
     </footer>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
