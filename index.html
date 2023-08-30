@@ -99,9 +99,22 @@
         <!-- end search bar -->
         <!-- produncts container start -->
         <div>
-          <div id="phonesContainer" class="grid grid-cols-3 mt-20 gap-10">
+          <!-- spiner -->
+          <div id="loading-spiner" class="py-60 hidden">
+            <div class="flex items-center justify-center">
+            <span class="loading loading-spinner loading-lg"></span>
+            </div>
           </div>
-          <div id="showAllBtn" class="text-center mt-20 mb-5 hidden">
+          <!-- empty message -->
+          <div id="emptyMessage" class="hidden">
+          <div class="flex justify-center items-center py-40">
+            <h1 class="text-center text-2xl text-gray-400">Your search result is empty?</h1>
+          </div>
+        </div>
+          <!-- items container -->
+          <div id="phonesContainer" class="grid grid-cols-3 mt-20 gap-10 mb-10">
+          </div>
+          <div id="showAllBtn" class="text-center mt-10 mb-5 hidden">
             <button onclick="showAllMobile()"
                 class="bg-sky-500 py-3.5 text-white font-semibold text-base px-8 rounded-lg border-none outline-none"
               >
@@ -109,6 +122,36 @@
               </button>
           </div>
       </div>
+      <!-- modal start  -->
+      <!-- You can open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
+      <dialog id="showMobileInfo" class="modal">
+        <form method="dialog" class="modal-box w-11/12 max-w-5xl">
+          <div id="modalContainer">
+              <!-- <div class="flex py-10 justify-center items-center rounded-lg bg-gray-200">
+              <img class="w-[170px] h-[200px] rounded-xl" src="${phone.image}" alt="">
+              </div>
+          <div class="">
+            <h3 class="mt-8 text-2xl font-bold">phone name is apple</h3>
+                <p class="text-base mt-4 text-gray-500">There are many variations of passages of available, but the majority have suffered</p>
+                <p class="mt-5 text-gray-500"><span class="font-semibold text-gray-600">Storage:</span> 128GB/256GB/1TB Storage, No card slot</p>
+                <p class="mt-5 text-gray-500"><span class="font-semibold text-gray-600">Display-Size:</span></p>
+                <p class="mt-5 text-gray-500"><span class="font-semibold text-gray-600">Chipset:</span></p>
+                <p class="mt-5 text-gray-500"><span class="font-semibold text-gray-600">Memory:</span></p>
+                <p class="mt-5 text-gray-500"><span class="font-semibold text-gray-600">Slug:</span></p>
+                <p class="mt-5 text-gray-500"><span class="font-semibold text-gray-600">Release date:</span></p>
+                <p class="mt-5 text-gray-500"><span class="font-semibold text-gray-600">Brand:</span></p>
+                <p class="mt-5 text-gray-500"><span class="font-semibold text-gray-600">GPS:</span></p>
+              
+          </div> -->
+          </div>
+          <div class="modal-action">
+            <!-- if there is a button, it will close the modal -->
+            <button class="btn">Close</button>
+          </div>
+        </form>
+      </dialog>
+      <!-- modal end -->
       </section>
     </main>
     <!-- footer -->
